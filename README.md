@@ -33,9 +33,6 @@ A professional GPS-based vehicle tracking system built with Raspberry Pi Pico, G
 - [Usage](#usage)
 - [SMS Commands](#sms-commands)
 - [Troubleshooting](#troubleshooting)
-- [Project Structure](#project-structure)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
@@ -80,7 +77,7 @@ A professional GPS-based vehicle tracking system built with Raspberry Pi Pico, G
 ```
 Neo-6M GPS    →    Raspberry Pi Pico
 -----------------------------------------
-VCC           →    3.3V (Pin 36)
+VCC           →    5V (VBUS - Pin 40)
 GND           →    GND (Pin 38)
 TX            →    GP1 (UART0 RX - Pin 2)
 RX            →    GP0 (UART0 TX - Pin 1)
@@ -142,8 +139,8 @@ Raspberry Pi Pico Pinout:
 │ GP1 (RX)  ←──  GPS TX   │
 │ GP4 (TX)  ──→  GSM RX   │
 │ GP5 (RX)  ←──  GSM TX   │
-│ 3.3V      ──→  GPS VCC  │
-│ 5V        ──→  GSM VCC  │
+│ VBUS      ──→  GPS VCC  │
+│ VBUS      ──→  GSM VCC  │
 │ GND       ──→  Common GND│
 └─────────────────────────┘
 ```
@@ -163,13 +160,7 @@ Edit the main code file and update the phone number:
 
 ```python
 # Replace with your phone number
-ADMIN_PHONE = "+1234567890"
-```
-
-### 2. Configure GSM APN (if needed)
-```python
-# Update with your carrier's APN settings
-APN = "internet"  # Your carrier's APN
+ADMIN_PHONE = "+9186********"
 ```
 
 ### 3. Configure GPS Update Interval
@@ -241,93 +232,12 @@ Google Maps: https://maps.google.com/?q=37.7749,-122.4194
 - Try different USB port
 - Restart Thonny IDE
 
----
-
-## 📁 Project Structure
-
-```
-GPS-Vehicle-Tracker-using-Raspberry-Pi-Pico-MicroPython-Thonny-IDE/
-│
-├── main.py                 # Main application code
-├── gps_module.py          # GPS parsing and handling
-├── gsm_module.py          # GSM communication functions
-├── config.py              # Configuration settings
-├── README.md              # This file
-├── requirements.txt       # Python dependencies
-├── LICENSE               # Project license
-│
-├── docs/
-│   ├── circuit_diagram.png
-│   ├── wiring_guide.pdf
-│   └── user_manual.md
-│
-├── examples/
-│   ├── basic_gps_test.py
-│   └── gsm_test.py
-│
-└── assets/
-    ├── demo_video.mp4
-    └── screenshots/
-```
-
----
-
-## 🔮 Future Enhancements
-
-- [ ] Web dashboard for real-time tracking
-- [ ] Geofencing with alerts
-- [ ] Speed monitoring and over-speed alerts
-- [ ] Historical route playback
-- [ ] Multiple vehicle support
-- [ ] Battery monitoring and low battery alerts
-- [ ] Emergency SOS button
-- [ ] Mobile app for Android/iOS
-- [ ] Data logging to SD card
-- [ ] GPRS data upload to cloud server
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-### Contribution Guidelines
-- Follow existing code style
-- Add comments for complex logic
-- Test thoroughly before submitting
-- Update documentation as needed
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 ShahbazCoder1
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-```
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
