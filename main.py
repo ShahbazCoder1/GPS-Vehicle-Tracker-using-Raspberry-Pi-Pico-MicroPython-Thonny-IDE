@@ -4,7 +4,7 @@
 import machine
 import time
 import sys
-from microgps import MicropyGPS
+from micropygps import MicropyGPS
 
 # --- Pin Definitions ---
 POWER_LED_PIN = 25
