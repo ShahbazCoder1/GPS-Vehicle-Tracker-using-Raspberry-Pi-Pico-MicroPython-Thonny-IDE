@@ -1,0 +1,2 @@
+# GPS-Vehicle-Tracker-using-Raspberry-Pi-Pico-MicroPython-Thonny-IDE
+Build a professional GPS-based vehicle tracking system using Raspberry Pi Pico, GSM module, and Neo-6M GPS receiver. This project tracks real-time vehicle location via SMS and Google Maps, offering reliable performance even with poor connectivity. Perfect for vehicle monitoring, and asset tracking applications, all programmed in MicroPython.
